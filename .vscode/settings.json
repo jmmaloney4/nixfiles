@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "dot_*": "shellscript",
+        "*.tmpl": "gotemplate",
+        "*.zsh.tmpl": "shellscript"
+    }
+}
