@@ -5,6 +5,9 @@
         lfs.enable = true;
         delta.enable = true;
 
+        userName = "Jack Maloney";
+        userEmail = "jack@maloney.ai";
+
         aliases = {
             a = "add -A";
             s = "status";

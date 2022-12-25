@@ -30,7 +30,7 @@
                     homebrew = {
                         enable = true;
                         casks = [
-                            ""
+                            "firefox"
                         ];
                     };
 
@@ -55,6 +55,9 @@
                             cp -aL "$src" /Applications/Nix\ Apps
                             done
                     '';
+
+                    # see: https://nix-community.github.io/home-manager/options.html#opt-programs.zsh.enableCompletion
+                    environment.pathsToLink = [ "/share/zsh" ];
                 }
             )
         ];
