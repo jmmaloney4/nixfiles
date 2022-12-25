@@ -1,11 +1,5 @@
 { config, pkgs, ... }:
 {
-    # Packages
-    environment.systemPackages = [
-        pkgs.wezterm
-        pkgs._1password-gui
-    ];
-
     # Enable Nix
     services.nix-daemon.enable = true;
     nix.package = pkgs.nix;
