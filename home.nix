@@ -5,5 +5,6 @@
         modules = [
             ./home/default.nix
             ./home/starship.nix
+            ./home/git.nix
         ];
     }
