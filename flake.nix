@@ -22,5 +22,11 @@
                     inherit inputs;
                 };
             };
+
+            homeConfigurations = {
+                jack = import ./home.nix {
+                    inherit inputs;
+                };
+            };
         };
 }

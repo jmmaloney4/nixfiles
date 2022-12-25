@@ -2,8 +2,30 @@
     inputs.darwin.lib.darwinSystem
     {
         system = "aarch64-darwin";
-        # specialArgs = { inherit lib pkgs inputs self darwin; };
-        modules = [ ../../shared/defaults.nix ../../shared/nix.nix ];
+        modules = [ 
+            ../../shared/default.nix
+            ../../shared/darwin.nix
+
+            inputs.home-manager.darwinModules.home-manager
+            ({...}:
+                let 
+                    username = "jack";
+                in
+                {
+                    users.users.${username}.home = "/Users/${username}";
+                    # nix.nixPath.nixpkgs = "${inputs.nixpkgs-unstable}";
+                    home-manager.useGlobalPkgs = true;
+                    home-manager.useUserPackages = true;
+                    home-manager.users.${username} = {
+                        imports = [
+                            ../../home/default.nix
+                            ../../home/starship.nix
+                        ];
+                        home.stateVersion = "22.11";
+                    };
+                }
+            )
+        ];
     }
 
 # { pkgs, inputs, lib, ... }:

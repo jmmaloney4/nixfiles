@@ -1,3 +1,4 @@
+{config, pkgs, ...}:
 {
     system.defaults = {
         NSGlobalDomain = {
