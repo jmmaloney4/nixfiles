@@ -1,7 +1,7 @@
 {config, pkgs, lib, ...}:
 {
     environment.systemPackages = lib.attrValues ({
-        inherit (pkgs) wezterm;
+        inherit (pkgs) wezterm _1password-gui;
     } // lib.optionalAttrs pkgs.stdenv.isLinux {
         inherit (pkgs) firefox;
     });
