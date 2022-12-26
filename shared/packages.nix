@@ -3,9 +3,9 @@
     environment.systemPackages = lib.attrValues ({
         inherit (pkgs) 
         wezterm 
-        _1password-gui
+        _1password-gui;
         
-        (pkgs.vscode-with-extensions.override {
+        vscode = (pkgs.vscode-with-extensions.override {
             vscode = pkgs.vscodium;
             vscodeExtensions = with unstable.vscode-extensions; [
                 # bbenoist.nix
@@ -21,8 +21,7 @@
                 justusadam.language-haskell
                 haskell.haskell
             ];
-        })
-        ;
+        });
     } // lib.optionalAttrs pkgs.stdenv.isLinux {
         inherit (pkgs) firefox;
     });
