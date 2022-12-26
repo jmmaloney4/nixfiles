@@ -1,7 +1,28 @@
 {config, pkgs, lib, ...}:
 {
     environment.systemPackages = lib.attrValues ({
-        inherit (pkgs) wezterm _1password-gui;
+        inherit (pkgs) 
+        wezterm 
+        _1password-gui
+        
+        (pkgs.vscode-with-extensions.override {
+            vscode = pkgs.vscodium;
+            vscodeExtensions = with unstable.vscode-extensions; [
+                # bbenoist.nix
+                eamodio.gitlens
+                golang.go         
+                james-yu.latex-workshop  
+                jnoortheen.nix-ide
+                matklad.rust-analyzer
+                # ms-python.python
+                ms-toolsai.jupyter
+                redhat.vscode-yaml
+                # juanblanco.solidity
+                justusadam.language-haskell
+                haskell.haskell
+            ];
+        })
+        ;
     } // lib.optionalAttrs pkgs.stdenv.isLinux {
         inherit (pkgs) firefox;
     });
