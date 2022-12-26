@@ -38,9 +38,11 @@
             "secring.*"
         ];
 
-        # signing = {
-        #     signByDefault = true;
-        #     # gpgPath = 
-        # };
+        extraConfig.gpg.format = "ssh";
+        signing = {
+            key = null;
+            signByDefault = true;
+            gpgPath = "/Applications/1Password.app/Contents/MacOS/op-ssh-sign";
+        };
     };
 }
