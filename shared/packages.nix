@@ -7,7 +7,7 @@
         
         vscode = (pkgs.vscode-with-extensions.override {
             vscode = pkgs.vscodium;
-            vscodeExtensions = with unstable.vscode-extensions; [
+            vscodeExtensions = with pkgs.vscode-extensions; [
                 # bbenoist.nix
                 eamodio.gitlens
                 golang.go         
