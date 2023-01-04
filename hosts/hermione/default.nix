@@ -6,6 +6,7 @@
             ../../shared/default.nix
             ../../shared/darwin.nix
             ../../shared/packages.nix
+            ./ipfs.nix
 
             inputs.home-manager.darwinModules.home-manager
             ({ config, pkgs, lib, ... }:
@@ -14,6 +15,8 @@
                 in
                 {
                     nixpkgs.config.allowUnfree = true;
+
+                    networking.hostName = "hermione";
 
                     users.users.${username}.home = "/Users/${username}";
                     # nix.nixPath.nixpkgs = "${inputs.nixpkgs-unstable}";

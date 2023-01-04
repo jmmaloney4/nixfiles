@@ -1,11 +1,15 @@
 {config, pkgs, ...}:
 {
+    # system.defaults.".GlobalPreferences"."com.apple.mouse.scaling" = -1.0;
     system.defaults = {
+        # ".GlobalPreferences" = {
+        #     # Mouse and trackpad
+        #     
+        #     "com.apple.mouse.scaling" = -1; # No mouse acceleration
+        # };
         NSGlobalDomain = {
-            # Mouse and trackpad
-            "com.apple.trackpad.scaling" = 3.0;
-            # "com.apple.mouse.scaling" = -1; # No mouse acceleration
-
+            "com.apple.trackpad.scaling" = 1.0;
+            
             # Keyboard
             InitialKeyRepeat = 15;
             KeyRepeat = 2;

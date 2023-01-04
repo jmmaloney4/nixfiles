@@ -4,8 +4,30 @@
     home.packages = lib.attrValues ({
         inherit (pkgs)
         _1password
+        fd
         ocrmypdf
+        ripgrep
         ;
+
+        vscode = (pkgs.vscode-with-extensions.override {
+            vscode = pkgs.vscodium;
+            vscodeExtensions = with pkgs.vscode-extensions; [
+                bbenoist.nix
+                ionide.ionide-fsharp
+                eamodio.gitlens
+                github.copilot
+                golang.go
+                haskell.haskell
+                ionide.ionide-fsharp
+                james-yu.latex-workshop
+                justusadam.language-haskell 
+                jnoortheen.nix-ide
+                matklad.rust-analyzer
+                ms-python.python
+                ms-toolsai.jupyter
+                redhat.vscode-yaml
+            ];
+        });
     }) ++ [
         pkgs.ghc
         pkgs.haskellPackages.cabal-install
