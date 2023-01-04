@@ -20,6 +20,7 @@
             "firefox"
             "obsidian"
             "roon"
+            "todoist"
             "zotero"
         ];
     };
