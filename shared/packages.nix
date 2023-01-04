@@ -24,9 +24,9 @@
             "todoist"
             "zotero"
         ];
-        masApps = [
+        masApps = {
             Magnet = 441258766;
             Amphetamine = 937984704;
-        ];
+        };
     };
 }
