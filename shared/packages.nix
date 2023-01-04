@@ -16,6 +16,7 @@
         enable = pkgs.stdenv.isDarwin;
         casks = [
             "1password"
+            "anki"
             "calibre"
             "firefox"
             "flux"
