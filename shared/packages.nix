@@ -18,10 +18,15 @@
             "1password"
             "calibre"
             "firefox"
+            "flux"
             "obsidian"
             "roon"
             "todoist"
             "zotero"
+        ];
+        masApps = [
+            Magnet = 441258766;
+            Amphetamine = 937984704;
         ];
     };
 }
