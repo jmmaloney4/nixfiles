@@ -14,16 +14,24 @@
  
    homebrew = {
         enable = pkgs.stdenv.isDarwin;
+        onActivation = {
+            cleanup = "zap";
+            upgrade = true;
+        };
         casks = [
             "1password"
             "anki"
             "calibre"
             "firefox"
             "flux"
+            "mullvadvpn"
             "obsidian"
             "roon"
             "todoist"
             "zotero"
+        ];
+        taps = [
+            "homebrew/cask"
         ];
         masApps = {
             Magnet = 441258766;
