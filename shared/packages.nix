@@ -1,7 +1,10 @@
 {config, pkgs, lib, ...}:
 {
     environment.systemPackages = lib.attrValues ({
-        inherit (pkgs) 
+        inherit (pkgs)
+        git
+        git-annex
+        # transmission-qt
         wezterm;
     } // lib.optionalAttrs pkgs.stdenv.isLinux {
         inherit (pkgs)
@@ -28,6 +31,7 @@
             "obsidian"
             "roon"
             "todoist"
+            "transmission"
             "zotero"
         ];
         taps = [
