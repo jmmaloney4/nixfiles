@@ -25,6 +25,7 @@
             "1password"
             "anki"
             "calibre"
+            "docker"
             "firefox"
             "flux"
             "mullvadvpn"

@@ -5,6 +5,7 @@
         inherit (pkgs)
         _1password
         fd
+        kubernetes-cli
         ocrmypdf
         ripgrep
         ;
