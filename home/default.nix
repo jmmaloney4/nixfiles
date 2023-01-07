@@ -8,6 +8,11 @@
         # kubernetes-cli
         ocrmypdf
         ripgrep
+
+        # Rust
+        cargo
+        rustfmt
+        libiconv
         ;
 
         vscode = (pkgs.vscode-with-extensions.override {
