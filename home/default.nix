@@ -10,8 +10,10 @@
         ripgrep
 
         # Rust
-        cargo
-        rustfmt
+        rustup
+        # cargo
+        # rustfmt
+        rust-analyzer
         libiconv
         ;
 

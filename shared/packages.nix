@@ -2,6 +2,7 @@
 {
     environment.systemPackages = lib.attrValues ({
         inherit (pkgs)
+        anki-bin
         git
         git-annex
         # transmission-qt
@@ -23,7 +24,7 @@
         };
         casks = [
             "1password"
-            "anki"
+            # "anki"
             "calibre"
             "docker"
             "firefox"
