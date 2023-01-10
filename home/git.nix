@@ -15,6 +15,7 @@
             co = "checkout";
             cp = "cherry-pick";
             ff = "merge --ff-only";
+            rb = "rebase";
 
             remotes  = "remote -v show";
             branches = "branch -a -vv";

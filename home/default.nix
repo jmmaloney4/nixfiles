@@ -34,6 +34,8 @@
                 ms-python.python
                 ms-toolsai.jupyter
                 redhat.vscode-yaml
+                streetsidesoftware.code-spell-checker
+                # znck.grammarly
             ];
         });
     }) ++ [
