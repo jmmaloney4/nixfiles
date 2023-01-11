@@ -34,6 +34,7 @@
             "roon"
             "todoist"
             "transmission"
+            "zoom"
             "zotero"
         ];
         taps = [
