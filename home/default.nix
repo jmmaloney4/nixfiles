@@ -4,10 +4,12 @@
     home.packages = lib.attrValues ({
         inherit (pkgs)
         _1password
+        curl
         fd
         # kubernetes-cli
         ocrmypdf
         ripgrep
+        wget
 
         # Rust
         rustup
