@@ -17,6 +17,9 @@
         # rustfmt
         rust-analyzer
         libiconv
+
+        # Lean Theorem Prover
+        # elan
         ;
 
         vscode = (pkgs.vscode-with-extensions.override {

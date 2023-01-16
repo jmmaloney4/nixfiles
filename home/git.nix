@@ -47,6 +47,8 @@
             signByDefault = true;
             # gpgPath = "/Applications/1Password.app/Contents/MacOS/op-ssh-sign";
         };
+
+        extraConfig.init.defaultBranch = "main";
     };
 
     home.file.".allowed_signers".text = ''

@@ -9,6 +9,22 @@
     nix.extraOptions = ''
         experimental-features = nix-command flakes
     '';
+    
+    nix.settings.trusted-public-keys = [
+        # Binary Cache for Haskell.nix
+        "hydra.iohk.io:f/Ea+s+dFdN+3Y/G+FDgSq+a5NEWhJGzdjvKNGv0/EQ="
+        
+        # Lean4 Theorem Prover
+        "cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY="
+        "lean4.cachix.org-1:mawtxSxcaiWE24xCXXgh3qnvlTkyU7evRRnGeAhD4Wk="
+    ];
+    nix.settings.substituters = [
+        # Binary Cache for Haskell.nix
+        "https://cache.iog.io"
+        
+        # Lean4 Theorem Prover
+        "https://lean4.cachix.org/"
+    ];
 
     # Enable ZSH
     programs.zsh.enable = true;
