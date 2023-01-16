@@ -8,6 +8,7 @@
     nix.nrBuildUsers = 16;
     nix.extraOptions = ''
         experimental-features = nix-command flakes
+        max-jobs = auto
     '';
     
     nix.settings.trusted-public-keys = [
