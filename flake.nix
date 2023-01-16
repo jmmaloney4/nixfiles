@@ -13,9 +13,14 @@
             url = github:nix-community/home-manager;
             inputs.nixpkgs.follows = "nixpkgs";
         };
+
+        vscode-extensions = {
+            url = github:nix-community/nix-vscode-extensions;
+            inputs.nixpkgs.follows = "nixpkgs";
+        };
     };
 
-    outputs = inputs @ { self, darwin, nixpkgs, home-manager }:
+    outputs = inputs @ { self, darwin, nixpkgs, home-manager, vscode-extensions }:
         {
             darwinConfigurations = {
                 hermione = import ./hosts/hermione/default.nix {

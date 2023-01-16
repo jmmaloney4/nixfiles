@@ -1,4 +1,4 @@
-{ lib, pkgs, ... }:
+{ config, lib, pkgs, inputs, system, ... }:
 {
     programs.home-manager.enable = true;
     home.packages = lib.attrValues ({
@@ -24,23 +24,27 @@
 
         vscode = (pkgs.vscode-with-extensions.override {
             vscode = pkgs.vscodium;
-            vscodeExtensions = with pkgs.vscode-extensions; [
+            vscodeExtensions = with inputs.vscode-extensions.packages.${system}.vscode; [
                 bbenoist.nix
                 ionide.ionide-fsharp
                 eamodio.gitlens
-                github.copilot
+                # GitHub.copilot
                 golang.go
                 haskell.haskell
                 ionide.ionide-fsharp
                 james-yu.latex-workshop
                 justusadam.language-haskell 
                 jnoortheen.nix-ide
-                matklad.rust-analyzer
+                leanprover.lean4
+                # matklad.rust-analyzer
                 ms-python.python
                 ms-toolsai.jupyter
                 redhat.vscode-yaml
                 streetsidesoftware.code-spell-checker
-                # znck.grammarly
+                znck.grammarly
+            ] ++ [
+                pkgs.vscode-extensions.github.copilot
+                pkgs.vscode-extensions.matklad.rust-analyzer
             ];
         });
     }) ++ [

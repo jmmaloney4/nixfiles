@@ -1,7 +1,10 @@
 { inputs }:
+    let
+        system = "aarch64-darwin";
+    in
     inputs.darwin.lib.darwinSystem
     {
-        system = "aarch64-darwin";
+        inherit system;
         modules = [ 
             ../../shared/default.nix
             ../../shared/darwin.nix
@@ -22,6 +25,7 @@
                     # nix.nixPath.nixpkgs = "${inputs.nixpkgs-unstable}";
                     home-manager.useGlobalPkgs = true;
                     home-manager.useUserPackages = true;
+                    home-manager.extraSpecialArgs = { inherit inputs system; };
                     home-manager.users.${username} = {
                         imports = [
                             ../../home/default.nix
