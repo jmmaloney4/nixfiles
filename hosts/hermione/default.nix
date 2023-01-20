@@ -9,6 +9,7 @@
             ../../shared/default.nix
             ../../shared/darwin.nix
             ../../shared/packages.nix
+            ./emacs.nix
             ./ipfs.nix
 
             inputs.home-manager.darwinModules.home-manager
@@ -31,8 +32,14 @@
                             ../../home/default.nix
                             ../../home/git.nix
                             ../../home/starship.nix
+                            inputs.nix-doom-emacs.hmModule
                         ];
                         home.stateVersion = "22.11";
+                        programs.doom-emacs = {
+                            enable = true;
+                            doomPrivateDir = ../../doom.d;
+                            emacsPackage = pkgs.emacs-nox;
+                        };
                     };
 
                     # Nix-darwin does not link installed applications to the user environment. This means apps will not show up

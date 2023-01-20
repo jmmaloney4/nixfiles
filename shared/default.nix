@@ -1,4 +1,16 @@
 { config, pkgs, ... }:
+let
+    substituters = [
+        # Binary Cache for Haskell.nix
+        "https://cache.iog.io"
+        
+        # Lean4 Theorem Prover
+        "https://lean4.cachix.org/"
+
+        # nix-community
+        "https://nix-community.cachix.org"
+    ];
+in
 {
     # Enable Nix
     services.nix-daemon.enable = true;
@@ -22,16 +34,8 @@
         # nix-community
         "nix-community.cachix.org-1:mB9FSh9qf2dCimDSUo8Zy7bkq5CX+/rkCWyvRCYg3Fs="
     ];
-    nix.settings.substituters = [
-        # Binary Cache for Haskell.nix
-        "https://cache.iog.io"
-        
-        # Lean4 Theorem Prover
-        "https://lean4.cachix.org/"
-
-        # nix-community
-        "https://nix-community.cachix.org"
-    ];
+    nix.settings.substituters = substituters;
+    nix.settings.trusted-substituters = substituters;
 
     # Enable ZSH
     programs.zsh.enable = true;

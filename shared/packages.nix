@@ -24,7 +24,6 @@
         };
         casks = [
             "1password"
-            # "anki"
             "calibre"
             "docker"
             "firefox"
@@ -32,6 +31,7 @@
             "mullvadvpn"
             "obsidian"
             "roon"
+            "tidal"
             "todoist"
             "transmission"
             "zoom"

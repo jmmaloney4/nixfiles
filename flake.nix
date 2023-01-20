@@ -18,9 +18,16 @@
             url = github:nix-community/nix-vscode-extensions;
             inputs.nixpkgs.follows = "nixpkgs";
         };
+
+        # spacemacs = {
+        #     url = github:syl20bnr/spacemacs;
+        #     flake = false;
+        # };
+
+        nix-doom-emacs.url = "github:nix-community/nix-doom-emacs";
     };
 
-    outputs = inputs @ { self, darwin, nixpkgs, home-manager, vscode-extensions }:
+    outputs = inputs @ { self, darwin, nixpkgs, home-manager, vscode-extensions, nix-doom-emacs }:
         {
             darwinConfigurations = {
                 hermione = import ./hosts/hermione/default.nix {

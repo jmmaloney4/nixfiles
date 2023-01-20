@@ -37,6 +37,7 @@
                 jnoortheen.nix-ide
                 leanprover.lean4
                 # matklad.rust-analyzer
+                mattn.lisp
                 ms-python.python
                 ms-toolsai.jupyter
                 redhat.vscode-yaml
@@ -51,7 +52,11 @@
         pkgs.ghc
         pkgs.haskellPackages.cabal-install
     ];
-    
+
+    home.sessionVariables = {
+        EDITOR = "emacs";
+    };
+
     programs.zoxide.enable = true;
     
     programs.fzf.enable = true;
