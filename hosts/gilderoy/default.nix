@@ -4,4 +4,5 @@ let
 in inputs.nixpkgs.lib.nixosSystem
 {
   inherit system;
+  modules = [];
 }
