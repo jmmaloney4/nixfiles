@@ -43,8 +43,8 @@ in inputs.nixpkgs.lib.nixosSystem
         environment.pathsToLink = [ "/share/zsh" ];
     })
 
-    ({ config, pkgs, lib, ... }: inputs.nixpkgs.lib.mkMerge {
+    ({ config, pkgs, lib, ... }: inputs.nixpkgs.lib.mkMerge [{
       networking.hostName = "gilderoy";
-    })
+    }])
   ];
 }
