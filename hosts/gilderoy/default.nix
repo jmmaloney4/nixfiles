@@ -7,7 +7,7 @@ in inputs.nixpkgs.lib.nixosSystem
   modules = [
     ./hardware-configuration.nix
     ../../shared/default.nix
-    ../../shared/packages.nix
+    #../../shared/packages.nix
 
     inputs.home-manager.nixosModules.home-manager
     ({ config, pkgs, lib, ... }:

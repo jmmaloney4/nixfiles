@@ -6,7 +6,8 @@
         git
         git-annex
         # transmission-qt
-        wezterm;
+        wezterm
+ 	zsh;
     } // lib.optionalAttrs pkgs.stdenv.isLinux {
         inherit (pkgs)
         _1password-gui
