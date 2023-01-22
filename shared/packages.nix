@@ -31,6 +31,7 @@
             "mullvadvpn"
             "obsidian"
             "roon"
+            "slack"
             "tidal"
             "todoist"
             "transmission"

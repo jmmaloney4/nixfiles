@@ -35,6 +35,12 @@
                 };
             };
 
+            nixosConfigurations = {
+                gilderoy = import ./hosts/gilderoy/default.nix {
+                    inherit inputs;
+                }
+            }
+
             homeConfigurations = {
                 jack = import ./home.nix {
                     inherit inputs;
