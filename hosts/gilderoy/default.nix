@@ -9,6 +9,7 @@ in inputs.nixpkgs.lib.nixosSystem
     ../../shared/default.nix
     ../../shared/packages.nix
 
+    inputs.home-manager.nixosModules.home-manager
     ({ config, pkgs, lib, ... }: inputs.nixpkgs.lib.mkMerge {
       networking.hostName = "gilderoy";
     })
