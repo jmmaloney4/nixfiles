@@ -4,5 +4,13 @@ let
 in inputs.nixpkgs.lib.nixosSystem
 {
   inherit system;
-  modules = [];
+  modules = [
+    ./hardware-configuration.nix
+    ../../shared/default.nix
+    ../../shared/packages.nix
+
+    ({ config, pkgs, lib, ... }: inputs.nixpkgs.lib.mkMerge {
+      networking.hostName = "gilderoy";
+    })
+  ];
 }
