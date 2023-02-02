@@ -25,6 +25,7 @@
         casks = [
             "1password"
             "calibre"
+            "discord"
             "docker"
             "firefox"
             "flux"
