@@ -3,6 +3,7 @@ let
     substituters = [
         # Binary Cache for Haskell.nix
         "https://cache.iog.io"
+        "https://cache.zw3rk.com"
         
         # Lean4 Theorem Prover
         "https://lean4.cachix.org/"
@@ -26,6 +27,7 @@ in
     nix.settings.trusted-public-keys = [
         # Binary Cache for Haskell.nix
         "hydra.iohk.io:f/Ea+s+dFdN+3Y/G+FDgSq+a5NEWhJGzdjvKNGv0/EQ="
+        "loony-tools:pr9m4BkM/5/eSTZlkQyRt57Jz7OMBxNSUiMC4FkcNfk="
         
         # Lean4 Theorem Prover
         "cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY="
