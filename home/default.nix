@@ -6,10 +6,14 @@
         _1password
         curl
         fd
-        # kubernetes-cli
         ocrmypdf
         ripgrep
         wget
+
+        # k8s
+        kubernetes-helm
+        kubectl
+        sops
 
         # Rust
         rustup
@@ -62,7 +66,7 @@
     programs.fzf.enableZshIntegration = true;
 
     programs.gh.enable = true;
-    programs.gh.git_protocol = "ssh";
+    programs.gh.settings.git_protocol = "ssh";
 
     programs.himalaya.enable = true;
 
@@ -85,6 +89,8 @@
         Host *
 	        IdentityAgent "~/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock"
     '';
+
+    programs.gpg.enable = true;
 
     programs.bat.enable = true;
     programs.bat.config.pager = "${pkgs.less}/bin/less -FR";
