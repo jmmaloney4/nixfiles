@@ -62,6 +62,7 @@
     programs.fzf.enableZshIntegration = true;
 
     programs.gh.enable = true;
+    programs.gh.git_protocol = "ssh";
 
     programs.himalaya.enable = true;
 
