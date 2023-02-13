@@ -26,7 +26,7 @@
         # elan
         ;
 
-        vscode = (inputs.vscode-extensions.packages.${system}.vscodiumWithExtensions.override {
+        vscode = (inputs.vscode-extensions.packages.${system}.vscodium-with-extensions.override {
             vscodeExtensions = with inputs.vscode-extensions.extensions.${system}.vscode-marketplace; [
                 bbenoist.nix
                 ionide.ionide-fsharp
