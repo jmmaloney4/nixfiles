@@ -60,6 +60,11 @@
         EDITOR = "emacs";
     };
 
+    home.shellAliases = {
+        e = "emacs";
+        code = "codium";
+    };
+
     programs.zoxide.enable = true;
     
     programs.fzf.enable = true;
@@ -80,9 +85,6 @@
     programs.zsh.enableSyntaxHighlighting = true;
     programs.zsh.history.extended = true;
     programs.zsh.historySubstringSearch.enable = true;
-    programs.zsh.shellAliases = {
-        code = "codium";
-    };
 
     programs.ssh.enable = true;
     programs.ssh.extraConfig = ''
