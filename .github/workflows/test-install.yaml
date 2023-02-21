@@ -10,5 +10,5 @@ jobs:
     - uses: cachix/install-nix-action@v19
       with:
         github_access_token: ${{ secrets.GITHUB_TOKEN }}
-    - run: nix build .#darwinConfigurations.hermione.system
+    - run: nix build .#darwinConfigurations.hermione-x86.system
     - run: ./result/sw/bin/darwin-rebuild switch --flake '.#hermione-x86'
