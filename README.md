@@ -10,5 +10,5 @@ darwin-rebuild switch --flake '.#hermione'
 ### First time around
 ```shell
 nix build .#darwinConfigurations.hermione.system
-result/sw/bin/darwin-rebuild switch --flake '.#hermione'
+./result/sw/bin/darwin-rebuild switch --flake '.#hermione'
 ```
