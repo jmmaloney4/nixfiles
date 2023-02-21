@@ -8,6 +8,8 @@
         userName = "Jack Maloney";
         userEmail = "jack@maloney.ai";
 
+        extraConfig.pull.rebase = true;
+        
         aliases = {
             a = "add -A";
             s = "status";
@@ -16,6 +18,7 @@
             cp = "cherry-pick";
             ff = "merge --ff-only";
             rb = "rebase";
+            p = "pull";
 
             remotes  = "remote -v show";
             branches = "branch -a -vv";
