@@ -6,3 +6,8 @@
 ```shell
 darwin-rebuild switch --flake '.#hermione'
 ```
+
+### First time around
+```shell
+nix build .#darwinConfigurations.hermione.system
+```
