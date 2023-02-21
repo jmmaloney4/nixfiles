@@ -32,6 +32,12 @@
             darwinConfigurations = {
                 hermione = import ./hosts/hermione/default.nix {
                     inherit inputs;
+                    system = "aarch64-darwin";
+                };
+
+                hermione-x86 = import ./hosts/hermione/default.nix {
+                    inherit inputs;
+                    system = "x86_64-darwin";
                 };
             };
 

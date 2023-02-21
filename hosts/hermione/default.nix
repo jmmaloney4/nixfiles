@@ -1,8 +1,4 @@
-{ inputs }:
-    let
-        system = "aarch64-darwin";
-    in
-    inputs.darwin.lib.darwinSystem
+{ inputs, system }: inputs.darwin.lib.darwinSystem
     {
         inherit system;
         modules = [ 
