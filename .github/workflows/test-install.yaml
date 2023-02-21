@@ -13,8 +13,8 @@ jobs:
     - uses: cachix/install-nix-action@v19
       with:
         github_access_token: ${{ secrets.GITHUB_TOKEN }}
-    - run: "nix build .#${{ env.system }}Configurations.${{ env.name }}.system"
-    - run: ./result/sw/bin/${{ env.system }}-rebuild build --flake ".#${{ env.name }}"
+    - run: nix build .#${{ env.system }}Configurations.${{ env.name }}.system
+    - run: ./result/sw/bin/${{ env.system }}-rebuild build --flake .#${{ env.name }}
 
   gilderoy:
     runs-on: ubuntu-latest 
@@ -26,5 +26,5 @@ jobs:
     - uses: cachix/install-nix-action@v19
       with:
         github_access_token: ${{ secrets.GITHUB_TOKEN }}
-    - run: "nix build .#${{ env.system }}Configurations.${{ env.name }}.system"
-    - run: ./result/sw/bin/${{ env.system }}-rebuild build --flake ".#${{ env.name }}"
+    - run: nix build .#${{ env.system }}Configurations.${{ env.name }}.system
+    - run: ./result/sw/bin/${{ env.system }}-rebuild build --flake .#${{ env.name }}
