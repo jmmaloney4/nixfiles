@@ -1,0 +1,14 @@
+name: "Test"
+on:
+  pull_request:
+  push:
+jobs:
+  tests:
+    runs-on: macos-latest
+    steps:
+    - uses: actions/checkout@v3.0.0
+    - uses: cachix/install-nix-action@v19.0.0
+      with:
+        github_access_token: ${{ secrets.GITHUB_TOKEN }}
+    - run: nix build .#darwinConfigurations.hermione.system
+    - run: ./result/sw/bin/darwin-rebuild switch --flake '.#hermione'
