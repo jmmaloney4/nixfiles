@@ -18,7 +18,7 @@
             cp = "cherry-pick";
             ff = "merge --ff-only";
             rb = "rebase";
-            p = "pull";
+            fff = "pull --ff-only";
 
             remotes  = "remote -v show";
             branches = "branch -a -vv";
