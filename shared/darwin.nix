@@ -26,6 +26,13 @@
             AppleShowScrollBars = "Automatic";
             AppleTemperatureUnit = "Fahrenheit";
         };
+
+        CustomSystemPreferences = {
+            "com.apple.Preview" = {
+                "com.apple.Preview.kPVPDFDefaultPageViewModeOption" = 1;
+            };
+        };
+        
         
         # Finder
         NSGlobalDomain.AppleShowAllExtensions = true;
