@@ -6,23 +6,25 @@ jobs:
   hermione:
     runs-on: macos-latest
     env:
+      system: darwin
       name: hermione-x86
     steps:
     - uses: actions/checkout@v3.3.0
     - uses: cachix/install-nix-action@v19
       with:
         github_access_token: ${{ secrets.GITHUB_TOKEN }}
-    - run: "nix build .#darwinConfigurations.${ env.name }.system"
-    - run: ./result/sw/bin/darwin-rebuild build --flake ".#${ env.name }"
+    - run: "nix build .#${{ env.system }}Configurations.${{ env.name }}.system"
+    - run: ./result/sw/bin/${{ env.system }}-rebuild build --flake ".#${{ env.name }}"
 
   gilderoy:
     runs-on: ubuntu-latest 
     env:
+      system: nixos
       name: gilderoy
     steps:
     - uses: actions/checkout@v3.3.0
     - uses: cachix/install-nix-action@v19
       with:
         github_access_token: ${{ secrets.GITHUB_TOKEN }}
-    - run: "nix build .#darwinConfigurations.${ env.name }.system"
-    - run: ./result/sw/bin/darwin-rebuild build --flake ".#${ env.name }"
+    - run: "nix build .#${{ env.system }}Configurations.${{ env.name }}.system"
+    - run: ./result/sw/bin/${{ env.system }}-rebuild build --flake ".#${{ env.name }}"
