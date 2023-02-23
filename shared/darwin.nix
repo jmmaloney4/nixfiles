@@ -27,7 +27,7 @@
             AppleTemperatureUnit = "Fahrenheit";
         };
 
-        CustomSystemPreferences = {
+        CustomUserPreferences = {
             "com.apple.Preview" = {
                 "com.apple.Preview.kPVPDFDefaultPageViewModeOption" = 1;
             };

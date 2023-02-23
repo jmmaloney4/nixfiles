@@ -23,6 +23,7 @@ in
         experimental-features = nix-command flakes
         max-jobs = auto
         keep-outputs = true
+        keep-derivations = true
     '';
     
     nix.settings.trusted-public-keys = [
