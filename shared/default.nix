@@ -10,6 +10,9 @@ let
 
         # nix-community
         "https://nix-community.cachix.org"
+
+        # garnix.io
+        "https://cache.garnix.io"
     ];
 in
 {
@@ -37,6 +40,9 @@ in
 
         # nix-community
         "nix-community.cachix.org-1:mB9FSh9qf2dCimDSUo8Zy7bkq5CX+/rkCWyvRCYg3Fs="
+
+        # garnix.io
+        "cache.garnix.io:CTFPyKSLcx5RMJKfLo5EEPUObbA78b0YQ2DTCJXqr9g="
     ];
     nix.settings.substituters = substituters;
     nix.settings.trusted-substituters = substituters;
