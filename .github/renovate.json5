@@ -6,8 +6,12 @@
   "rebaseWhen": "behind-base-branch",
   "dependencyDashboard": true,
   "dependencyDashboardTitle": "Renovate Dashboard",
-  "assignees": ["jmmaloney4"],
-  "docker": {
+  "lockFileMaintenance": {
+    "enabled": true,
+    "extends": ["schedule:daily"],
+    "automerge": false
+  },
+  "nix": {
     "enabled": true
   }
 }
