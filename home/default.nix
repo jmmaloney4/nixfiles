@@ -41,6 +41,7 @@
                 leanprover.lean4
                 # matklad.rust-analyzer
                 mattn.lisp
+                mkhl.direnv
                 ms-python.python
                 ms-toolsai.jupyter
                 redhat.vscode-yaml
