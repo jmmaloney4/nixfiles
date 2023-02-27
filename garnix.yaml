@@ -1,3 +1,4 @@
 builds:
   include:
-  - 'darwinConfigurations.hermione'
+  # - 'darwinConfigurations.hermione'
+  - 'packages.aarch64-darwin.default'

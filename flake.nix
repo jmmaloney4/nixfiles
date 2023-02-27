@@ -52,5 +52,7 @@
                     inherit inputs;
                 };
             };
+
+            packages.aarch64-darwin.default = hermione.system;
         };
 }
