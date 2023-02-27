@@ -1,0 +1,3 @@
+builds:
+  include:
+  - 'darwinConfigurations.hermione.system'
