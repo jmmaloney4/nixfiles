@@ -28,7 +28,7 @@
     };
 
     outputs = inputs @ { self, darwin, nixpkgs, home-manager, vscode-extensions, nix-doom-emacs }:
-        {
+        rec {
             darwinConfigurations = {
                 hermione = import ./hosts/hermione/default.nix {
                     inherit inputs;
@@ -53,6 +53,6 @@
                 };
             };
 
-            packages.aarch64-darwin.default = hermione.system;
+            packages.aarch64-darwin.default = darwinConfigurations.hermione.system;
         };
 }
