@@ -44,8 +44,10 @@
             "homebrew/cask"
         ];
         masApps = {
-            Magnet = 441258766;
             Amphetamine = 937984704;
+            Highlights = 1498912833;
+            Magnet = 441258766;
+            Tot = 1491071483;
         };
     };
 }
