@@ -33,6 +33,7 @@
             "obsidian"
             "qobuz"
             "roon"
+            "skim"
             "slack"
             "todoist"
             "transmission"
