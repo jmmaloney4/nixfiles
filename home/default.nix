@@ -64,6 +64,7 @@
     home.shellAliases = {
         e = "emacs";
         # code = "codium";
+        l = "ls -l";
     };
 
     programs.zoxide.enable = true;
